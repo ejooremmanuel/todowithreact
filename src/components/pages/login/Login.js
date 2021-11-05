@@ -50,7 +50,7 @@ const Login = () => {
           style={{
             color: "rgb(255, 255,255)",
             backgroundColor: "red",
-            width: "60%",
+            width: "80%",
             height: "40px",
             display: "flex",
             alignItems: "center",
@@ -68,7 +68,7 @@ const Login = () => {
           style={{
             color: "rgb(255, 255,255)",
             backgroundColor: "green",
-            width: "60%",
+            width: "80%",
             height: "40px",
             display: "flex",
             alignItems: "center",
@@ -81,7 +81,7 @@ const Login = () => {
       ) : (
         ""
       )}
-      <Form style={{ width: "60%" }} onSubmit={onSubmit}>
+      <Form style={{ width: "80%" }} onSubmit={onSubmit}>
         <Form.Field required>
           <label>Email Address</label>
           <Input
