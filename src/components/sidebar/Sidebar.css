@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 2em;
-  z-index: 9999;
+  z-index: 99;
 }
 .sidebar_container-hide {
   background: #c7c7c7;

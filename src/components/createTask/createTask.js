@@ -29,11 +29,10 @@ const CreateTask = () => {
     };
 
     try {
-      let res = await axios(config);
+      await axios(config);
       setDescription("");
       setTitle("");
-      console.log(res.data);
-      setTask([...task, { title, description }]);
+      setTask([{ title, description }, ...task]);
       navigate("/user");
     } catch (err) {
       console.log(err.response.data);

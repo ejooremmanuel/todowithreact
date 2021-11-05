@@ -1,0 +1,49 @@
+.getTaskContainer {
+  background-color: #fff;
+  height: 60px;
+  width: 80%;
+  padding-left: 10px;
+  padding-top: 5px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 10px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.getTaskContainer div {
+  align-self: center;
+}
+.getTaskContainer div p {
+  position: relative;
+  bottom: 15px;
+  width: 100%;
+}
+.getTaskContainer div h3 {
+  position: relative;
+  width: 100%;
+}
+.getTaskContainer div {
+  width: 100%;
+}
+
+.task-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 5px;
+  justify-self: flex-end;
+  align-self: center;
+  margin-left: 250px;
+}
+
+@media screen and (max-width: 500px) {
+  .getTaskContainer {
+    background-color: #fff;
+    height: 60px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+  }
+}
