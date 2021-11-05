@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Delete, Edit } from "@material-ui/icons";
 import React, { useEffect, useContext } from "react";
 import { allTasks } from "./taskCall";
