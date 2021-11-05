@@ -136,4 +136,7 @@
   .todo-header-max p {
     display: none;
   }
+  .task-wrapper {
+    flex-direction: column;
+  }
 }
