@@ -1,0 +1,138 @@
+/* Custom Fonts */
+@font-face {
+  font-family: "Acumin Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acumin Pro Bold"), url("./font/Acumin-BdPro.woff") format("woff");
+}
+
+.wrapper-container {
+  background: #e3e2e0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 200px;
+}
+.wrapper-container-max {
+  background: #e3e2e0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+.wrapper-menu-icon {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.todo-header h1 {
+  font-family: "Acumin Pro Bold";
+  font-weight: 400;
+  font-size: 50px;
+}
+.todo-header-max h1 {
+  font-family: "Acumin Pro Bold";
+  font-weight: 400;
+  font-size: 50px;
+}
+.todo-header p {
+  padding: 5px 30px;
+}
+.todo-header-max p {
+  padding: 5px 30px;
+}
+.todo-header {
+  width: 75%;
+  margin: 40px auto;
+  height: 200px;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.todo-header-max {
+  width: 80%;
+  margin: 40px auto;
+  height: 200px;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.regbuttons {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 10px;
+}
+.regbuttons div:hover {
+  border-bottom: 2px solid rgba(83, 83, 240, 0.911);
+  cursor: pointer;
+}
+.formsshow {
+  margin-bottom: 40px;
+  width: 50vw;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.task-display-wrapper {
+  flex: 1;
+  margin-right: 20px;
+  padding-left: 50px;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 900px) {
+  .todo-header {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .todo-header h1 {
+    font-size: 30px;
+  }
+  .todo-header-max h1 {
+    font-size: 30px;
+  }
+  .todo-header p {
+    padding: 2px;
+  }
+  .todo-header-max p {
+    padding: 2px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .todo-header h1 {
+    font-size: 30px;
+  }
+  .todo-header p {
+    display: none;
+  }
+  .todo-header-max p {
+    display: none;
+  }
+}

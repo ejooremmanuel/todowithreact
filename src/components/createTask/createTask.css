@@ -1,0 +1,14 @@
+.task-container {
+  align-self: flex-start;
+  margin-left: 150px;
+}
+.inputareatask {
+  width: 30vw !important;
+  border-radius: 10px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .task-container {
+    margin-left: 0;
+  }
+}

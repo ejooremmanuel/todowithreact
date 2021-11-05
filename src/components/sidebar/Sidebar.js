@@ -1,0 +1,49 @@
+import { AddAPhoto, Book, Delete } from "@material-ui/icons";
+import React, { useContext } from "react";
+import { ClickContext } from "../../context/ClickContext";
+import "./Sidebar.css";
+
+const Sidebar = () => {
+  const { click, setClick } = useContext(ClickContext);
+  const user = JSON.parse(localStorage.getItem("user"));
+  return (
+    <div className={click ? "sidebar_container" : "sidebar_container-hide"}>
+      <div
+        className="menu-icon-sidebar"
+        onClick={() => {
+          setClick(!click);
+        }}
+      >
+        <i className=" triangle left icon"></i>
+      </div>
+
+      <div className="user-info">
+        <div className="user-image">
+          <AddAPhoto className="photouser" />
+        </div>
+        <h3>{user ? `Hi ${user.user.fullname}` : "Hi"}</h3>
+      </div>
+      <div className="sidebaritems">
+        <div className="photouser">
+          <Book />
+          Notes
+        </div>
+        <hr />
+
+        <div className="photouser">
+          <Delete />
+          Trash
+        </div>
+        <hr />
+      </div>
+      <div className="signout">
+        <div className="photouser">
+          <i className="sign-out icon"></i>
+          <h3>Sign out</h3>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;

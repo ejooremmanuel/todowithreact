@@ -1,0 +1,90 @@
+.sidebar_container {
+  background: #c7c7c7;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2em;
+  z-index: 9999;
+}
+.sidebar_container-hide {
+  background: #c7c7c7;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2em;
+  z-index: 9999;
+  display: none;
+}
+
+.menu-icon-sidebar {
+  color: #fff;
+  font-size: 20px;
+  align-self: flex-start;
+  padding: 20px;
+}
+.menu-icon-sidebar i {
+  cursor: pointer;
+}
+
+.photouser {
+  cursor: pointer;
+}
+
+.user-info {
+  margin-top: 50px;
+}
+.user-image {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background-color: azure;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebaritems {
+  width: 100%;
+}
+.sidebaritems div {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.sidebaritems hr {
+  margin: 20px 0;
+  border-top: 1px solid #fff;
+}
+
+.signout {
+  align-self: flex-start;
+  justify-self: flex-end;
+  margin-top: 50px;
+  padding-left: 10px;
+}
+.signout div {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.signout div h3 {
+  margin-bottom: 27px;
+}
+.signout div i {
+  font-size: 20px;
+}
