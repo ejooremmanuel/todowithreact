@@ -3,10 +3,9 @@ import { Button, Form } from "semantic-ui-react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./createTask.css";
-import { ClickContext } from "../../context/ClickContext";
-import { allTasks } from "../getTasks/taskCall";
+import { UserContext } from "../../context/UserContext";
 const CreateTask = () => {
-  const { setShowTask, showTask } = useContext(ClickContext);
+  const { task, setTask } = useContext(UserContext);
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"));
   const [title, setTitle] = useState("");
@@ -14,7 +13,6 @@ const CreateTask = () => {
   const onSubmit = async (e) => {
     let token = user.token;
     e.preventDefault();
-
     const data = {
       title,
       description,
@@ -31,12 +29,12 @@ const CreateTask = () => {
     };
 
     try {
-      await axios(config);
+      let res = await axios(config);
       setDescription("");
       setTitle("");
-      setShowTask(!showTask);
+      console.log(res.data);
+      setTask([...task, { title, description }]);
       navigate("/user");
-      allTasks();
     } catch (err) {
       console.log(err.response.data);
     }

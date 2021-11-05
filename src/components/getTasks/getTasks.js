@@ -1,12 +1,15 @@
 import { Delete, Edit } from "@material-ui/icons";
-import React, { useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { allTasks } from "./taskCall";
-
+import { UserContext } from "../../context/UserContext";
 const GetTasks = () => {
-  const [task, setTask] = useState([]);
-  allTasks().then((res) => {
-    return setTask(res);
-  });
+  const { task, setTask } = useContext(UserContext);
+  useEffect(() => {
+    allTasks().then((res) => {
+      setTask(res);
+    });
+  }, []);
+
   return (
     <>
       {task.map(({ title, description, _id }, index) => {

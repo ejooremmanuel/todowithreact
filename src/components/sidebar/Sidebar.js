@@ -1,10 +1,12 @@
 import { AddAPhoto, Book, Delete } from "@material-ui/icons";
 import React, { useContext } from "react";
 import { ClickContext } from "../../context/ClickContext";
+import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 
 const Sidebar = () => {
   const { click, setClick } = useContext(ClickContext);
+  const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"));
   return (
     <div className={click ? "sidebar_container" : "sidebar_container-hide"}>
@@ -37,7 +39,13 @@ const Sidebar = () => {
         <hr />
       </div>
       <div className="signout">
-        <div className="photouser">
+        <div
+          className="photouser"
+          onClick={() => {
+            localStorage.removeItem("user");
+            navigate("/");
+          }}
+        >
           <i className="sign-out icon"></i>
           <h3>Sign out</h3>
         </div>

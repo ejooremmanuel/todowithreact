@@ -8,6 +8,7 @@ import PageLoader from "./components/pages/Loader";
 const Home = lazy(() => import("./components/home/Home"));
 const UserPage = lazy(() => import("./components/pages/userpage/Userpage"));
 function App() {
+  const [task, setTask] = useState([]);
   const [click, setClick] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showform, setForm] = useState(false);
@@ -30,6 +31,8 @@ function App() {
           setEmail,
           password,
           setPassword,
+          task,
+          setTask,
         }}
       >
         <ClickContext.Provider
