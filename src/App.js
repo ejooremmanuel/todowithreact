@@ -58,16 +58,8 @@ function App() {
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route exact path="/" element={<Home />}></Route>
-                <Route
-                  exact
-                  path="/user"
-                  element={user ? <UserPage /> : <Home />}
-                ></Route>
-                <Route
-                  exact
-                  path="/user/trash"
-                  element={user ? <Trash /> : <Home />}
-                ></Route>
+                <Route exact path="/user" element={<UserPage />}></Route>
+                <Route exact path="/user/trash" element={<Trash />}></Route>
               </Routes>
             </Suspense>
           </Router>
