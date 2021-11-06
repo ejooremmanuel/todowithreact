@@ -1,0 +1,118 @@
+/* Custom Fonts */
+@font-face {
+  font-family: "Acumin Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acumin Pro Bold"), url("./font/Acumin-BdPro.woff") format("woff");
+}
+
+.wrapper-container {
+  background: #e3e2e0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 200px;
+}
+.wrapper-container-max {
+  background: #e3e2e0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+.wrapper-menu-icon {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.todo-header h1 {
+  font-family: "Acumin Pro Bold";
+  font-weight: 400;
+  font-size: 50px;
+}
+.todo-header-max h1 {
+  font-family: "Acumin Pro Bold";
+  font-weight: 400;
+  font-size: 50px;
+}
+.todo-header p {
+  padding: 5px 30px;
+}
+.todo-header-max p {
+  padding: 5px 30px;
+}
+.todo-header {
+  width: 75%;
+  margin: 40px auto;
+  height: 200px;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.todo-header-max {
+  width: 80%;
+  margin: 40px auto;
+  height: 200px;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.deleteditems {
+  background: #fff;
+  width: 30%;
+  border-radius: 10px;
+  padding: 4px 6px;
+  margin-top: 5px;
+}
+.deleteditems span {
+  position: relative;
+  bottom: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .todo-header {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .todo-header h1 {
+    font-size: 30px;
+  }
+  .todo-header-max h1 {
+    font-size: 30px;
+  }
+  .todo-header p {
+    padding: 2px;
+  }
+  .todo-header-max p {
+    padding: 2px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .todo-header h1 {
+    font-size: 30px;
+  }
+  .todo-header p {
+    display: none;
+  }
+  .todo-header-max p {
+    display: none;
+  }
+}

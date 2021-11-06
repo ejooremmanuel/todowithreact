@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 2em;
-  z-index: 99;
+  z-index: 999;
 }
 .sidebar_container-hide {
   background: #c7c7c7;
@@ -40,6 +40,7 @@
 
 .photouser {
   cursor: pointer;
+  color: #000;
 }
 
 .user-info {

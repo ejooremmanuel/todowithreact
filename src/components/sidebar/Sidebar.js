@@ -1,7 +1,7 @@
 import { AddAPhoto, Book, Delete } from "@material-ui/icons";
 import React, { useContext } from "react";
 import { ClickContext } from "../../context/ClickContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./Sidebar.css";
 
 const Sidebar = () => {
@@ -26,16 +26,19 @@ const Sidebar = () => {
         <h3>{user ? `Hi ${user.user.fullname}` : "Hi"}</h3>
       </div>
       <div className="sidebaritems">
-        <div className="photouser">
-          <Book />
-          Notes
-        </div>
+        <Link to="/user">
+          <div className="photouser">
+            <Book />
+            Notes
+          </div>
+        </Link>
         <hr />
-
-        <div className="photouser">
-          <Delete />
-          Trash
-        </div>
+        <Link to="/user/trash">
+          <div className="photouser">
+            <Delete />
+            Trash
+          </div>
+        </Link>
         <hr />
       </div>
       <div className="signout">

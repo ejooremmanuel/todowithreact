@@ -10,7 +10,7 @@ const Wrapper = () => {
   return (
     <div className={click ? "wrapper-container" : "wrapper-container-max"}>
       <div className={click ? "todo-header" : "todo-header-max"}>
-        <h1>Todo App</h1>
+        <h1>TODO APP</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt modi
           ad, dicta ipsa vitae eveniet. Praesentium quia velit accusamus minima.

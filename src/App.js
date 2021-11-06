@@ -5,6 +5,7 @@ import { UserContext } from "./context/UserContext";
 import { MessageContext } from "./context/FormContext/MessageContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PageLoader from "./components/pages/Loader";
+import Trash from "./components/pages/Trash";
 const Home = lazy(() => import("./components/home/Home"));
 const UserPage = lazy(() => import("./components/pages/userpage/Userpage"));
 function App() {
@@ -19,6 +20,8 @@ function App() {
   const [successful, setSuccess] = useState("");
   const [showTask, setShowTask] = useState(false);
   const [rendered, setRendered] = useState();
+  const [deleted, setDeleted] = useState([]);
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <MessageContext.Provider
       value={{ error, successful, setError, setSuccess }}
@@ -33,6 +36,8 @@ function App() {
           setPassword,
           task,
           setTask,
+          deleted,
+          setDeleted,
         }}
       >
         <ClickContext.Provider
@@ -53,7 +58,16 @@ function App() {
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route exact path="/" element={<Home />}></Route>
-                <Route exact path="/user" element={<UserPage />}></Route>
+                <Route
+                  exact
+                  path="/user"
+                  element={user ? <UserPage /> : <Home />}
+                ></Route>
+                <Route
+                  exact
+                  path="/user/trash"
+                  element={user ? <Trash /> : <Home />}
+                ></Route>
               </Routes>
             </Suspense>
           </Router>

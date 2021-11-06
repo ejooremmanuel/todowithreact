@@ -25,6 +25,7 @@
 }
 .getTaskContainer div {
   width: 100%;
+  flex-basis: 40%;
 }
 
 .task-icons {
@@ -32,9 +33,9 @@
   align-items: center;
   gap: 10px;
   font-size: 5px;
+  position: relative;
   justify-self: flex-end;
   align-self: center;
-  margin-left: 250px;
 }
 
 @media screen and (max-width: 500px) {
