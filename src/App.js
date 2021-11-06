@@ -21,7 +21,6 @@ function App() {
   const [showTask, setShowTask] = useState(false);
   const [rendered, setRendered] = useState();
   const [deleted, setDeleted] = useState([]);
-  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <MessageContext.Provider
       value={{ error, successful, setError, setSuccess }}
