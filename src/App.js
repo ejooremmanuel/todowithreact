@@ -21,6 +21,7 @@ function App() {
   const [showTask, setShowTask] = useState(false);
   const [rendered, setRendered] = useState();
   const [deleted, setDeleted] = useState([]);
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <MessageContext.Provider
       value={{ error, successful, setError, setSuccess }}
@@ -57,8 +58,16 @@ function App() {
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route exact path="/" element={<Home />}></Route>
-                <Route exact path="/user" element={<UserPage />}></Route>
-                <Route exact path="/user/trash" element={<Trash />}></Route>
+                {user ? (
+                  <Route exact path="/user" element={<UserPage />}></Route>
+                ) : (
+                  <Route exact path="/" element={<Home />}></Route>
+                )}
+                {user ? (
+                  <Route exact path="/user/trash" element={<Trash />}></Route>
+                ) : (
+                  <Route exact path="/" element={<Home />}></Route>
+                )}
               </Routes>
             </Suspense>
           </Router>
