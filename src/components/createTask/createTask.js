@@ -48,7 +48,7 @@ const CreateTask = () => {
   return (
     <div className="task-container">
       <h4>Add a new task</h4>
-      <Form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit} style={{ width: "100%" }}>
         <Form.Field>
           <label>Title</label>
           <input
@@ -58,6 +58,7 @@ const CreateTask = () => {
             onChange={(e) => {
               setTitle(e.target.value);
             }}
+            style={{ width: "100%" }}
           />
         </Form.Field>
         <Form.Field>
@@ -65,7 +66,7 @@ const CreateTask = () => {
           <textarea
             value={description}
             className="inputareatask"
-            style={{ resize: "none", height: "80px" }}
+            style={{ resize: "none", height: "80px", width: "100%" }}
             placeholder="E.g Meeting with the team..."
             onChange={(e) => {
               setDescription(e.target.value);

@@ -12,6 +12,7 @@ const AuthReducer = (state, { type, payload }) => {
       return {
         user: null,
       };
+
     default:
       return state;
   }

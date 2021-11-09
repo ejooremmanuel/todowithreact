@@ -32,13 +32,18 @@ const Login = () => {
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
       setTimeout(() => {
         navigate("/user");
+        setLoading(false);
+        setSuccess("");
+        setError("");
       }, 2000);
     } catch (err) {
       setLoading(false);
+      console.log(err.response.data.message);
       setError(err.response.data.message);
-      dispatch({ type: "LOGIN_FAIL" });
       setTimeout(() => {
         navigate("/");
+        setSuccess("");
+        setError("");
       }, 1000);
     }
   };

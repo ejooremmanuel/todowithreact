@@ -56,6 +56,16 @@
   align-items: center;
   justify-content: center;
 }
+.user-image img {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fff;
+  display: flex;
+}
+.user-image form {
+  position: absolute;
+}
 
 .sidebaritems {
   width: 100%;

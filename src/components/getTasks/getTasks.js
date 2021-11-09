@@ -3,14 +3,15 @@ import { Delete, Edit } from "@material-ui/icons";
 import React, { useEffect, useContext } from "react";
 import { allTasks } from "./taskCall";
 import { UserContext } from "../../context/UserContext";
+import { AuthContext } from "../../context/AuthContext/AuthContext";
 import { DeleteTask } from "../../services/Services";
 import "./getTasks.css";
 const GetTasks = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
+  const { user } = useContext(AuthContext);
   const { task, setTask, deleted, setDeleted } = useContext(UserContext);
   useEffect(() => {
     allTasks().then((res) => {
-      setTask(res);
+      setTask(res.task);
     });
   }, []);
 
@@ -24,7 +25,12 @@ const GetTasks = () => {
               <p>{description}</p>
             </div>
             <div className="task-icons">
-              <Edit style={{ cursor: "pointer" }} />
+              <Edit
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  console.log(_id, title, description);
+                }}
+              />
               <Delete
                 style={{ cursor: "pointer" }}
                 onClick={() => {

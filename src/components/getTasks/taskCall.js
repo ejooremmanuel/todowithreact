@@ -11,8 +11,7 @@ export const allTasks = async () => {
   };
   try {
     let res = await axios(config);
-    let items = res.data.task;
-    return items;
+    return res.data;
   } catch (err) {
     console.log(err.response.data);
   }

@@ -9,6 +9,7 @@ import Trash from "./components/pages/Trash";
 const Home = lazy(() => import("./components/home/Home"));
 const UserPage = lazy(() => import("./components/pages/userpage/Userpage"));
 function App() {
+  const [image, setImage] = useState("");
   const [task, setTask] = useState([]);
   const [click, setClick] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -37,6 +38,8 @@ function App() {
           setTask,
           deleted,
           setDeleted,
+          image,
+          setImage,
         }}
       >
         <ClickContext.Provider

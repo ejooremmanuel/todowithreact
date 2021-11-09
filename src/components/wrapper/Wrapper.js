@@ -11,14 +11,7 @@ const Wrapper = () => {
     <div className={click ? "wrapper-container" : "wrapper-container-max"}>
       <div className={click ? "todo-header" : "todo-header-max"}>
         <h1>TODO APP</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt modi
-          ad, dicta ipsa vitae eveniet. Praesentium quia velit accusamus minima.
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
-          officiis, quia voluptatem porro, eius impedit fugit neque quo
-          aspernatur mollitia ut ducimus repudiandae nihil fuga cumque sequi
-          animi odio blanditiis.
-        </p>
+        <p>Manage your day to day tasks with ease with Todoapper.</p>
       </div>
       <div className="registration">
         <div className="regbuttons">

@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 200px;
+  overflow-x: hidden !important;
 }
 .wrapper-container-max {
   background: #e3e2e0;
@@ -24,7 +24,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 50px;
+  padding-left: 0 !important;
+  overflow-x: hidden !important;
 }
 .wrapper-menu-icon {
   position: absolute;
@@ -50,8 +51,8 @@
   padding: 5px 30px;
 }
 .todo-header {
-  width: 75%;
-  margin: 40px auto;
+  width: 70%;
+  margin: 40px 0;
   height: 200px;
   border-radius: 20px;
   background: #fff;
@@ -62,7 +63,7 @@
   padding: 20px;
 }
 .todo-header-max {
-  width: 80%;
+  width: 70%;
   margin: 40px auto;
   height: 200px;
   border-radius: 20px;
@@ -114,13 +115,22 @@
   }
 }
 @media screen and (max-width: 500px) {
+  .todo-header,
+  .todo-header-max {
+    width: 90%;
+  }
   .todo-header h1 {
     font-size: 30px;
   }
+
   .todo-header p {
-    display: none;
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
   }
   .todo-header-max p {
-    display: none;
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
   }
 }
